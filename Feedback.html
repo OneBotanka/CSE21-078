@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+        <nav>
+            <label class="logo"> <a href="Feedback.html">Qwertyish</a></label>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Upcoming Movies.html">Upcoming Movies</a></li>
+                <li><a href="Now Showing Movies.html">Now Showing Movies</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Feedback.html" class="feedback-active">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <section class="feedbackcontainer">
+            <h2 class="heading">Feedback</h2>
+            <p>How would you rate our service?</p>
+            <div class="post"><div class="text">Thanks for rating us!</div>
+            <div class="edit">Edit</div></div>
+            <div class="starwidget">
+                <input type="radio" name="rate" id="rate5">
+                <label for="rate5" class='bx bxs-star'></label>
+                <input type="radio" name="rate" id="rate4">
+                <label for="rate4" class='bx bxs-star'></label>
+                <input type="radio" name="rate" id="rate3">
+                <label for="rate3" class='bx bxs-star'></label>
+                <input type="radio" name="rate" id="rate2">
+                <label for="rate2" class='bx bxs-star'></label>
+                <input type="radio" name="rate" id="rate1">
+                <label for="rate1" class='bx bxs-star'></label>
+
+                <form action="#">
+                    <header></header>
+                    <div class="textarea"><textarea cols="30" placeholder="Have feedback? We'd love to hear it, but please don't share sensitive infomation."></textarea></div>
+                    <div class="button1"><button type="submit">Post</button></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="footer">
+            <a href="#" class="logo"><i class='bx bxs-movie'></i></a>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </a></div>
+        </section>
+
+        <script>
+            const button1= document.querySelector("button");
+            const post= document.querySelector(".post");
+            const widget= document.querySelector(".starwidget");
+            const editBtn= document.querySelector(".edit");
+            
+            button1.onclick= ()=>{ widget.style.display= "none";
+                                   post.style.display= "block";
+            editBtn.onclick= ()=>{ widget.style.display= "block";
+                                   post.style.display= "none";
+                                 }
+                                 return false;}                     
+        </script>
+</body>
+
+</html>
